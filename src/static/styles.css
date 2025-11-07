@@ -100,31 +100,52 @@ section h3 {
 }
 
 .participant {
-  padding: 6px 0;
+  padding: 8px 12px;
   position: relative;
-  padding-left: 20px;
   color: #495057;
   font-size: 0.9rem;
   border-bottom: 1px solid rgba(26, 35, 126, 0.1);
   transition: color 0.2s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 4px;
+  border-radius: 4px;
 }
 
-.participant:before {
-  content: "•";
-  color: #1a237e;
-  font-size: 1.2rem;
-  position: absolute;
-  left: 0;
-  top: 4px;
-  font-weight: bold;
+.participant:hover {
+  background-color: rgba(26, 35, 126, 0.05);
+}
+
+.participant-name {
+  flex: 1;
+}
+
+.delete-participant {
+  background: none;
+  border: none;
+  color: #dc3545;
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 14px;
+  opacity: 0.7;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.delete-participant:hover {
+  opacity: 1;
+  background-color: rgba(220, 53, 69, 0.1);
+  transform: scale(1.1);
 }
 
 .participant:last-child {
   border-bottom: none;
-}
-
-.participant:hover {
-  color: #1a237e;
+  margin-bottom: 0;
 }
 
 .no-participants {
